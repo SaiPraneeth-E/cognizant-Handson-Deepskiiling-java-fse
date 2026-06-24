@@ -1,0 +1,28 @@
+DESC TRANSACTIONS;
+
+CREATE OR REPLACE TRIGGER CheckTransactionRules
+BEFORE INSERT ON TRANSACTIONS
+FOR EACH ROW
+DECLARE
+    v_balance NUMBER;
+BEGIN
+    IF :NEW.TRANSACTIONTYPE = 'DEPOSIT' THEN
+        IF :NEW.AMOUNT <= 0 THEN
+            RAISE_APPLICATION_ERROR(-20010, 'Deposit must be positive');
+        END IF;
+    END IF;
+    IF :NEW.TRANSACTIONTYPE = 'WITHDRAW' THEN
+        SELECT BALANCE INTO v_balance
+        FROM ACCOUNTS
+        WHERE ACCOUNTID = :NEW.ACCOUNTID;
+
+        IF :NEW.AMOUNT > v_balance THEN
+            RAISE_APPLICATION_ERROR(-20011, 'Insufficient balance');
+        END IF;
+    END IF;
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RAISE_APPLICATION_ERROR(-20012, 'Account not found');
+END;
+/
