@@ -1,0 +1,17 @@
+ALTER TABLE CUSTOMERS ADD IsVIP VARCHAR2(5);
+
+DECLARE
+BEGIN
+    FOR cust_rec IN (
+        SELECT CUSTOMERID, BALANCE FROM CUSTOMERS
+    ) LOOP
+        IF cust_rec.BALANCE > 10000 THEN
+            UPDATE CUSTOMERS
+            SET IsVIP = 'TRUE'
+            WHERE CUSTOMERID = cust_rec.CUSTOMERID;
+        END IF;
+    END LOOP;
+
+    COMMIT;
+END;
+/
