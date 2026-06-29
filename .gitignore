@@ -1,13 +1,21 @@
 # Maven target folders
 **/target/
+target/
 **/*.class
+*.class
 
-# Eclipse & IntelliJ project files
+# Eclipse & IntelliJ & VS Code project files
 **/.idea/
+.idea/
+.vscode/
 **/*.iml
+*.iml
 **/.settings/
+.settings/
 **/.project
+.project
 **/.classpath
+.classpath
 **/.factorypath
 **/bin/
 
