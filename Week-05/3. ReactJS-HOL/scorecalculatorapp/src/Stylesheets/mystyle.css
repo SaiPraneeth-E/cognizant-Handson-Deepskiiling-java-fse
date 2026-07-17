@@ -1,0 +1,84 @@
+body {
+  background-color: #f1f5f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  max-width: 480px;
+  width: 90%;
+  margin: 40px auto;
+  border: 1px solid #e2e8f0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  text-align: left;
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #0f172a;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 15px;
+  letter-spacing: -0.025em;
+}
+
+.name, .school, .total, .score {
+  font-size: 1.1rem;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+.name {
+  color: #1e3a8a;
+  border-left: 4px solid #3b82f6;
+}
+
+.school {
+  color: #581c87;
+  border-left: 4px solid #8b5cf6;
+}
+
+.total {
+  color: #701a75;
+  border-left: 4px solid #d946ef;
+}
+
+.score {
+  color: #065f46;
+  border-left: 4px solid #10b981;
+  font-size: 1.25rem;
+  background-color: #ecfdf5;
+}
+
+span {
+  font-weight: 500;
+  color: #475569;
+}
+
+.score span {
+  font-weight: 700;
+  color: #059669;
+}

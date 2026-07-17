@@ -1,0 +1,24 @@
+body {
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #1e293b;
+}
+
+div {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 30px;
+  letter-spacing: -0.025em;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+

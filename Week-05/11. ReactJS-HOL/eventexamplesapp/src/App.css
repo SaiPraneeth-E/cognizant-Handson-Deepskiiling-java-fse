@@ -1,0 +1,171 @@
+body {
+  background-color: #f1f5f9;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #1e293b;
+}
+
+/* Top level container of App */
+#root > div {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Inner container for CurrencyConverter */
+#root > div > div {
+  margin-top: 40px;
+  border-top: 2px solid #f1f5f9;
+  padding-top: 30px;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  max-width: 100%;
+}
+
+/* Counter Title */
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* Modern Pill Button Styling */
+button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -2px rgba(59, 130, 246, 0.1);
+  transition: all 0.2s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2), 0 4px 6px -4px rgba(59, 130, 246, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Specific styling for the buttons based on order or hierarchy */
+button:nth-of-type(2) {
+  background-color: #ef4444; /* Decrement */
+  box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.1), 0 2px 4px -2px rgba(239, 68, 68, 0.1);
+}
+
+button:nth-of-type(2):hover {
+  background-color: #dc2626;
+  box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.2), 0 4px 6px -4px rgba(239, 68, 68, 0.2);
+}
+
+button:nth-of-type(3) {
+  background-color: #10b981; /* Say Welcome */
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.1), 0 2px 4px -2px rgba(16, 185, 129, 0.1);
+}
+
+button:nth-of-type(3):hover {
+  background-color: #059669;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2), 0 4px 6px -4px rgba(16, 185, 129, 0.2);
+}
+
+button:nth-of-type(4) {
+  background-color: #6366f1; /* Click on me */
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.1), 0 2px 4px -2px rgba(99, 102, 241, 0.1);
+}
+
+button:nth-of-type(4):hover {
+  background-color: #4f46e5;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2), 0 4px 6px -4px rgba(99, 102, 241, 0.2);
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a !important;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* Table styling for form */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px 0;
+  vertical-align: middle;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+td:first-child {
+  width: 100px;
+}
+
+/* Inputs styling */
+input[type="number"], input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #0f172a;
+  background-color: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background-color: #ffffff;
+}
+
+input[type="text"][readonly] {
+  background-color: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+  border-color: #e2e8f0;
+}
+
+/* Submit button within form */
+form button[type="submit"] {
+  background-color: #0f172a;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1);
+}
+
+form button[type="submit"]:hover {
+  background-color: #1e293b;
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.2);
+}
+
+/* Hide line breaks */
+br {
+  display: none;
+}
+

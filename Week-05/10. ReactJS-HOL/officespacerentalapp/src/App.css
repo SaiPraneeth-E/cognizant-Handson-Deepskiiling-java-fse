@@ -1,0 +1,93 @@
+body {
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #334155;
+}
+
+/* Style the top-level container, overriding the inline style margin if possible,
+   or complementing it */
+div[style*="marginLeft"] {
+  margin: 50px auto !important;
+  max-width: 900px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.03em;
+}
+
+/* Individual card container */
+div[style*="marginLeft"] > div {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+div[style*="marginLeft"] > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Image styling */
+div[style*="marginLeft"] img {
+  width: 250px !important;
+  height: 180px !important;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Details block */
+div[style*="marginLeft"] h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+}
+
+div[style*="marginLeft"] h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 6px 0;
+  color: #475569;
+}
+
+/* Overriding or working with the inline green/red rent color */
+div[style*="marginLeft"] h3[style*="color"] {
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Red rent background */
+div[style*="marginLeft"] h3[style*="color"][style*="red"] {
+  background-color: #fef2f2;
+}
+
+/* Green rent background */
+div[style*="marginLeft"] h3[style*="color"][style*="green"] {
+  background-color: #f0fdf4;
+}
+
+/* Hide the <br /> elements since we use margins */
+div[style*="marginLeft"] br {
+  display: none;
+}
+
