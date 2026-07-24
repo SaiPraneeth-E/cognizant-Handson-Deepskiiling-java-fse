@@ -17,8 +17,8 @@ This hands-on covered setting up Git on Windows 11 and making the first commit t
 
 ```bash
 git --version
-git config --global user.name "SaiPraneeth-E"
-git config --global user.email "edupulapatisaipraneeth12345@gmail.com"
+git config --global user.name "sanjana123-dot"
+git config --global user.email "sanjanapasam410@gmail.com"
 git config --global core.editor "code --wait"
 git config --list
 mkdir GitDemo && cd GitDemo
@@ -28,7 +28,7 @@ git status
 git add welcome.txt
 git commit -m "Initial commit: Add welcome.txt"
 git log --oneline
-git remote add origin https://github.com/SaiPraneeth-E/cognizant-Handson-Deepskiiling-java-fse.git
+git remote add origin https://github.com/sanjana123-dot/Deepskilling-java-fse.git
 git push -u origin master
 ```
 
